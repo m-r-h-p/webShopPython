@@ -14,4 +14,8 @@
     {% empty %}
         <p>نظری ثبت نشده است.</p>
     {% endfor %}
+<form action="{% url 'shop:add_to_cart' product.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit">اضافه به سبد خرید</button>
+</form>
 {% endblock %}

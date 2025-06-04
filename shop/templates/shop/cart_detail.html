@@ -1,0 +1,10 @@
+{% extends 'shop/base.html' %}
+{% block title %}سبد خرید{% endblock %}
+{% block content %}
+    <h2>سبد خرید شما</h2>
+    {% for item in cart.items.all %}
+        <p>{{ item.product.name }} - تعداد: {{ item.quantity }} - قیمت: {{ item.product.price }}</p>
+    {% empty %}
+        <p>سبد خرید خالی است.</p>
+    {% endfor %}
+{% endblock %}
