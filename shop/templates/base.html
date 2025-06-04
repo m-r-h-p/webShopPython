@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}فروشگاه{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; text-align: right; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .product { border: 1px solid #ddd; padding: 10px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>فروشگاه آنلاین</h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

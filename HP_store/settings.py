@@ -65,6 +65,9 @@ TEMPLATES = [
             ],
         },
     },
+    {
+        'DIRS': [BASE_DIR / 'templates'],
+    },
 ]
 
 WSGI_APPLICATION = 'HP_store.wsgi.application'

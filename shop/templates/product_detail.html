@@ -1,0 +1,17 @@
+{% extends 'shop/base.html' %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block content %}
+    <h2>{{ product.name }}</h2>
+    <p>دسته‌بندی: {{ product.category.name }}</p>
+    <p>{{ product.description }}</p>
+    <p>قیمت: {{ product.price }} تومان</p>
+    {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" width="200">
+    {% endif %}
+    <h3>نظرات</h3>
+    {% for comment in comments %}
+        <p><strong>{{ comment.user.username }}</strong>: {{ comment.text }}</p>
+    {% empty %}
+        <p>نظری ثبت نشده است.</p>
+    {% endfor %}
+{% endblock %}
